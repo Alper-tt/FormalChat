@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Kurumsal Mesaj Yazıcı",
+  "version": "0.3.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://api.groq.com/*"],
+  "action": { "default_popup": "popup.html" },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content.js"] }],
+  "web_accessible_resources": [{
+    "resources": ["content.html"],
+    "matches": ["<all_urls>"]
+  }]
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ayarlar</title>
+  <style>
+    body {
+      font-family: system-ui;
+      padding: 12px;
+      min-width: 300px
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      cursor: pointer
+    }
+
+    button:hover {
+      background: #eaeaea
+    }
+
+    .row {
+      margin-bottom: 10px
+    }
+  </style>
+</head>
+
+<body>
+  <h3 style="margin:0 0 8px">Ayarlar</h3>
+
+  <div class="row">
+    <label>Groq API Key</label>
+    <input id="apiKey" type="password" placeholder="gsk_..." />
+  </div>
+
+  <div class="row">
+    <label>Dil</label>
+    <select id="lang">
+      <option>Turkish</option>
+      <option>English</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Ton</label>
+    <select id="tone">
+      <option>formal</option>
+      <option>neutral</option>
+      <option>friendly-formal</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Mod</label>
+    <select id="mode">
+      <option value="email">E-posta</option>
+      <option value="chat">Chat</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Kısayol (örn: Alt+Shift+U, Cmd+Shift+K)</label>
+    <input id="shortcut" type="text" placeholder="Alt+Shift+U" />
+  </div>
+
+  <button id="save">Kaydet</button>
+  <button id="openPanel" style="float:right">Yanıt Panelini Aç</button>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

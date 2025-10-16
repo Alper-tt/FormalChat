@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kurumsal Yanıt Paneli</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+    }
+
+    button {
+      margin-right: 8px;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #eaeaea;
+    }
+
+    #out {
+      white-space: pre-wrap;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      margin-top: 12px;
+      background: #fafafa;
+      min-height: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Kurumsal Yanıt Paneli</h2>
+
+  <label for="orig">Gelen mesaj</label><br />
+  <textarea id="orig" placeholder="Örneğin: Raporu gönderdiniz mi?"></textarea><br /><br />
+
+  <label for="draft">Kısa cevabın</label><br />
+  <textarea id="draft" placeholder="Henüz bitmedi ama bugün yollarım"></textarea><br /><br />
+
+  <div>
+    <label for="pmode">Mod</label>
+    <select id="pmode">
+      <option value="email">E-posta</option>
+      <option value="chat">Chat</option>
+    </select>
+    <button id="gen">Üret</button>
+    <button id="copy">Kopyala</button>
+    <button id="paste">Aktif inputa ekle</button>
+  </div>
+
+  <h3>Önerilen yanıt</h3>
+  <pre id="out">(henüz bir yanıt üretilmedi)</pre>
+
+  <script src="panel.js"></script>
+</body>
+
+</html>
